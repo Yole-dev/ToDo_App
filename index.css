@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+
+/* default styles */
+
+body {
+    background: rgb(22, 22, 32);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main {
+    height: 180px;
+    background: url(images/bg-mobile-dark.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    z-index: 99;
+    position: absolute;
+    top: 2.2rem;
+}
+
+.mainContainer > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mainContainer > div:first-of-type p {
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.mainContainer > div:first-of-type img {
+    width: 20px;
+}
+
+.mainContainer > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgb(37, 39, 60);
+    border-radius: 7px;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.mainContainer > div:nth-child(2) .add {
+    background: transparent;
+    border: solid 1.5px  rgb(54, 56, 77);
+    border-radius: 100%;
+    padding: 0.6rem;
+}
+
+.add:hover {
+    border: solid 1px linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) ;
+}
+
+.mainContainer > div:nth-child(2) > input {
+    color:  rgb(98, 100, 121);
+    font-size: 14px;
+    font-weight: 400;
+    background: inherit;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.mainContainer > div:nth-child(2) > input::placeholder {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mainContainer > div:nth-child(2) > input:focus  {
+    outline: none;
+    caret-color: hsl(220, 98%, 61%);
+}
+
+.mainContainer > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    background:rgb(37, 39, 60);
+    margin-top: 1rem;
+    width: 100%;
+    max-height: 326px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.taskContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.taskContainer > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    color:rgb(125, 126, 138);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.082);
+    padding: 1rem;
+}
+
+.taskContainer > div:last-of-type {
+    border: none;
+}
+
+.taskContainer > div button {
+    background: transparent;
+    border: solid 1.5px  rgb(54, 56, 77);
+    border-radius: 100%;
+    padding: 0.6rem;
+}
+
+.taskContainer > div button img {
+    width: 8px;
+}
+
+.active__checkbox {
+    border: none !important;
+    padding: 0.15rem 0.4rem !important;
+    background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) !important;
+}
+
+
+.taskContainer > div p {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.completedTask {
+    text-decoration: line-through;
+}
+
+.taskContainer > div img {
+    width: 12px;
+}
+
+.mainContainer > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background:rgb(37, 39, 60);
+    border-radius: 7px;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.mainContainer > div:last-of-type p {
+    color:rgb(98, 100, 121);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    color:rgb(98, 100, 121);
+    background: rgb(37, 39, 60);
+    border-top: solid 1px rgba(98, 100, 121, 0.281);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.clear_all, .sortAll,
+.sortActive, .sortCompleted, 
+.checkbox, .delete, .add {
+    cursor: pointer;
+}
+
+.active__filter {
+    color: hsl(220, 98%, 61%) !important;
+}
+
+.attribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 67vh;
+}
+
+.attribution p {
+    text-align: center;
+    font-size: 12px;
+    color:rgb(98, 100, 121);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 800px) {
+    .mainContainer {
+        width: 50%;
+    }
+}

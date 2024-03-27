@@ -1,0 +1,25 @@
+# Avoid accidental upload of the Sketch and Figma design files
+# Avoid accidental upload of the json and node_modules files
+# Avoid accidental upload of the README-template and tailwind json configurtion files
+#####################################################
+## Please do not remove lines 7 - 15 - thanks! 🙂 ##
+#####################################################
+*.sketch
+*.fig
+*.style-guide.md
+*.package-lock.json
+*.design
+*.node_modules
+*.package.json
+*.tailwind.config.json
+*.README-template.md
+
+# Avoid accidental XD upload if you convert the design file
+###############################################
+## Please do not remove line 21 - thanks! 🙂 ##
+###############################################
+*.xd
+
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="index.css">
+  <script defer src="script.js"></script>
+
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+  <main>
+    <div class="mainContainer">
+
+        <div>
+          <p>todo</p>
+
+          <img src="images/icon-sun.svg" class="dayTheme" alt="a sun icon">
+          <img src="images/icon-moon.svg" class="displayNone nightTheme" alt="a moon icon">
+        </div>
+
+        <div class="createTask">
+          <button type="submit" class="add"></button>
+
+          <input type="text" name="createTask" id="task" placeholder="Create a new todo..." maxlength="40">
+        </div>
+
+        <div class="taskContainer">
+          <!-- the content of this div exists in the javascript -->
+        </div>
+
+        <div class="items">
+          <small>
+            <span class="number_of_items"></span>
+            items left
+          </small>
+
+          <small class="clear_all">
+            Clear Completed
+          </small>
+        </div>
+
+        <div class="filter">
+          <p class="sortAll active__filter">All</p>
+          <p class="sortActive">Active</p>
+          <p class="sortCompleted">Completed</p>
+        </div>
+
+    </div>  
+  </main>
+
+  <footer>
+    <div class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Yole-dev/">Yole</a>.</p>     
+    </div>
+  </footer>
+
+</body>
+</html>
